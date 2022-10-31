@@ -14,7 +14,7 @@ S = 100
 MAX_EPISODES = 365
 CUST = np.random.randint(0, 10 + 1)
 LEADTIME = 2
-SAFETYSTOCK = 10
+SAFETYSTOCK = 10   
 ORDERCOST = 3
 HOLDINGCOST = 5 / 365 * S
 S_ = 0
@@ -46,7 +46,7 @@ def get_env_feedback(S, A):
             R = HOLDINGCOST * -1
             S_ = S - CUST
 
-    else:
+            else:
 
         if S < SAFETYSTOCK:
             R = -10
